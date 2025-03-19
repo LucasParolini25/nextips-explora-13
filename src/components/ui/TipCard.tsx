@@ -12,6 +12,7 @@ interface TipCardProps {
   category: string;
   whatsappLink?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const TipCard = ({
@@ -22,6 +23,7 @@ const TipCard = ({
   category,
   whatsappLink,
   className,
+  style,
 }: TipCardProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   
@@ -45,6 +47,7 @@ const TipCard = ({
         "group relative overflow-hidden rounded-xl bg-nextips-dark border border-white/10 transition-all duration-500 hover:shadow-xl hover:shadow-nextips-aqua/10 hover:border-nextips-aqua/30",
         className
       )}
+      style={style}
     >
       {/* Imagen */}
       <div className="aspect-video w-full relative overflow-hidden">

@@ -6,6 +6,7 @@ export interface Tip {
   image: string;
   category: string;
   subcategory?: string;
+  whatsappLink?: string;
 }
 
 // Datos de ejemplo para las diferentes categorías

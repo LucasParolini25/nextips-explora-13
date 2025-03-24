@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { SidebarProvider, Sidebar, SidebarContent, SidebarHeader, SidebarFooter, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarTrigger } from '@/components/ui/sidebar';
 import { toast } from 'sonner';
@@ -8,6 +8,7 @@ import { Home, List, LogOut, Plus } from 'lucide-react';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
     localStorage.removeItem('nextips_admin_token');
@@ -18,6 +19,10 @@ const AdminDashboard = () => {
   useEffect(() => {
     document.title = 'Panel de Administración | Nextips';
   }, []);
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
     <SidebarProvider>
@@ -33,7 +38,7 @@ const AdminDashboard = () => {
           <SidebarContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={window.location.pathname === '/admin'}>
+                <SidebarMenuButton asChild isActive={isActive('/admin')}>
                   <button onClick={() => navigate('/admin')}>
                     <Home size={20} />
                     <span>Dashboard</span>
@@ -42,7 +47,7 @@ const AdminDashboard = () => {
               </SidebarMenuItem>
               
               <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={window.location.pathname === '/admin'}>
+                <SidebarMenuButton asChild isActive={isActive('/admin')}>
                   <button onClick={() => navigate('/admin')}>
                     <List size={20} />
                     <span>Lista de Tips</span>
@@ -51,7 +56,7 @@ const AdminDashboard = () => {
               </SidebarMenuItem>
               
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive('/admin/tips/crear')}>
                   <button onClick={() => navigate('/admin/tips/crear')}>
                     <Plus size={20} />
                     <span>Crear Nuevo Tip</span>

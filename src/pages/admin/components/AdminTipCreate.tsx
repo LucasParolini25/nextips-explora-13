@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -10,9 +9,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast } from 'sonner';
-import { categoryData } from '../../category/utils/categoryData';
+import { categoryData } from '../utils/adminData';
 
-// Esquema de validación para el formulario
 const formSchema = z.object({
   title: z.string().min(1, 'El título es requerido'),
   description: z.string().min(1, 'La descripción es requerida'),
@@ -43,7 +41,6 @@ const AdminTipCreate = () => {
   });
 
   useEffect(() => {
-    // Cargar categorías
     const cats = categoryData.map(cat => ({
       id: cat.id,
       name: cat.name
@@ -52,10 +49,8 @@ const AdminTipCreate = () => {
   }, []);
 
   const onSubmit = (values: FormValues) => {
-    // En una implementación real, esto enviaría los datos a la API
     setIsLoading(true);
     
-    // Simulamos una petición API
     setTimeout(() => {
       console.log('Nuevo tip creado:', values);
       toast.success('Tip creado correctamente');
@@ -66,9 +61,8 @@ const AdminTipCreate = () => {
 
   const handleCategoryChange = (value: string) => {
     form.setValue('category', value);
-    form.setValue('subcategory', ''); // Resetear la subcategoría
+    form.setValue('subcategory', '');
     
-    // Actualizar subcategorías disponibles
     const selectedCategory = categoryData.find(cat => cat.name === value);
     if (selectedCategory && selectedCategory.subcategories) {
       setSubcategories(selectedCategory.subcategories);

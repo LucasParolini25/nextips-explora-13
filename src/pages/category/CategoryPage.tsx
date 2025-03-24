@@ -38,7 +38,7 @@ const CategoryPage = () => {
   }, [categoryId]);
   
   // Verificar si hay filtros activos
-  const hasActiveFilters = searchTerm || selectedSubcategory;
+  const hasActiveFilters = !!searchTerm || !!selectedSubcategory;
   
   // Limpiar todos los filtros
   const clearFilters = () => {

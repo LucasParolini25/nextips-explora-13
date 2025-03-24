@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -10,7 +9,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast } from 'sonner';
-import { Tip, categoryData } from '../../category/utils/categoryData';
+import { Tip } from '../../category/utils/categoryData';
+import { categoryData } from '../utils/adminData';
 
 // Esquema de validación para el formulario
 const formSchema = z.object({

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -7,9 +6,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { toast } from 'sonner';
 import { Edit, Plus, Search, Trash } from 'lucide-react';
 import { Tip } from '../../category/utils/categoryData';
-
-// Simulación de datos - normalmente esto vendría de una API
-import { categoryData } from '../../category/utils/categoryData';
+import { categoryData } from '../utils/adminData';
 
 const AdminTipsList = () => {
   const [tips, setTips] = useState<Tip[]>([]);

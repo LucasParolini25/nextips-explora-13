@@ -1,19 +1,15 @@
-
 import { Link } from 'react-router-dom';
 import { Instagram, Mail, MapPin, Phone } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-nextips-darkBlue border-t border-white/10 text-white">
+  return <footer className="bg-nextips-darkBlue border-t border-white/10 text-white">
       <div className="page-container py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Logo y descripción */}
           <div className="flex flex-col space-y-4">
             <Link to="/" className="inline-block" aria-label="Nextips - Inicio">
               <div className="text-2xl font-bold tracking-tighter">
-                <span className="text-nextips-aqua">Next</span>
+                <span className="text-nextips-aqua">Nex</span>
                 <span className="text-nextips-yellow">tips</span>
               </div>
             </Link>
@@ -23,20 +19,10 @@ const Footer = () => {
               por expertos locales.
             </p>
             <div className="flex items-center space-x-4 pt-2">
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/80 hover:text-nextips-yellow transition-colors duration-300"
-                aria-label="Síguenos en Instagram"
-              >
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-nextips-yellow transition-colors duration-300" aria-label="Síguenos en Instagram">
                 <Instagram size={20} />
               </a>
-              <a 
-                href="mailto:info@nextips.com" 
-                className="text-white/80 hover:text-nextips-yellow transition-colors duration-300"
-                aria-label="Envíanos un email"
-              >
+              <a href="mailto:info@nextips.com" className="text-white/80 hover:text-nextips-yellow transition-colors duration-300" aria-label="Envíanos un email">
                 <Mail size={20} />
               </a>
             </div>
@@ -47,34 +33,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-nextips-aqua">Explorar</h3>
             <ul className="space-y-3">
               <li>
-                <Link 
-                  to="/categoria/excursiones" 
-                  className="text-gray-300 hover:text-nextips-yellow transition-colors duration-300"
-                >
+                <Link to="/categoria/excursiones" className="text-gray-300 hover:text-nextips-yellow transition-colors duration-300">
                   Excursiones
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/categoria/hospedajes" 
-                  className="text-gray-300 hover:text-nextips-yellow transition-colors duration-300"
-                >
+                <Link to="/categoria/hospedajes" className="text-gray-300 hover:text-nextips-yellow transition-colors duration-300">
                   Hospedajes
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/categoria/alquiler-autos" 
-                  className="text-gray-300 hover:text-nextips-yellow transition-colors duration-300"
-                >
+                <Link to="/categoria/alquiler-autos" className="text-gray-300 hover:text-nextips-yellow transition-colors duration-300">
                   Alquiler de autos
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/contacto" 
-                  className="text-gray-300 hover:text-nextips-yellow transition-colors duration-300"
-                >
+                <Link to="/contacto" className="text-gray-300 hover:text-nextips-yellow transition-colors duration-300">
                   Contacto
                 </Link>
               </li>
@@ -105,8 +79,6 @@ const Footer = () => {
           <p>© {currentYear} Nextips. Todos los derechos reservados.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

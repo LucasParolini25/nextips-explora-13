@@ -13,7 +13,7 @@ export const categoryData: Category[] = [
   {
     id: 'excursiones',
     name: 'Excursiones',
-    subcategories: ['Circuitos', 'Montaña', 'Navegación', 'Trekking'],
+    subcategories: ['Circuitos', 'Aventura', 'Gastronomía'],
     tips: [
       {
         id: '1',

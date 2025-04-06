@@ -3,6 +3,7 @@ export interface Tip {
   title: string;
   description: string;
   image: string;
+  gallery?: string[];  // Array opcional de URLs de imágenes
   category: string;
   subcategory?: string;
   whatsappLink?: string;
@@ -20,7 +21,9 @@ const TIPS_DATA: Record<string, Tip[]> = {
       description: 'Recorrido panorámico de 60 km que bordea lagos y miradores con vistas increíbles.',
       image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
       category: 'Excursiones',
-      subcategory: 'Circuitos'
+      subcategory: 'Circuitos',
+      price: 'Desde $15.000',
+      whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
     },
     {
       id: '4',
@@ -54,7 +57,9 @@ const TIPS_DATA: Record<string, Tip[]> = {
       description: 'Ubicado a orillas del Nahuel Huapi con habitaciones de lujo y spa con vista al lago.',
       image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
       category: 'Hospedajes',
-      subcategory: 'Hoteles'
+      subcategory: 'Hoteles',
+      price: 'Desde $45.000 por noche',
+      whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
     },
     {
       id: '5',
@@ -87,6 +92,12 @@ const TIPS_DATA: Record<string, Tip[]> = {
       title: 'Fiat Cronos',
       description: 'Sedán compacto ideal para la ciudad y viajes, con excelente consumo de combustible y amplio baúl.',
       image: '/images/autos/fiat-cronos.webp',
+      gallery: [
+        '/images/autos/fiat-cronos.webp',
+        '/images/autos/fiat-cronos-2.webp',
+        '/images/autos/fiat-cronos-3.webp',
+        '/images/autos/fiat-cronos-4.webp'
+      ],
       category: 'Alquiler de autos',
       subcategory: 'Sedán',
       price: 'A consultar',
@@ -99,10 +110,16 @@ const TIPS_DATA: Record<string, Tip[]> = {
       title: 'Peugeot 208',
       description: 'Hatchback moderno y dinámico, perfecto para moverse en la ciudad con estilo y comodidad.',
       image: '/images/autos/peugeot-208.webp',
+      gallery: [
+        '/images/autos/peugeot-208.webp',
+        '/images/autos/peugeot-208-2.webp',
+        '/images/autos/peugeot-208-3.webp',
+        '/images/autos/peugeot-208-4.webp'
+      ],
       category: 'Alquiler de autos',
       subcategory: 'Hatchback',
       price: 'A consultar',
-      features: '\n• Pantalla táctil multimedia\n• Android Auto/Apple CarPlay\n• Sensores de estacionamiento\n• Control de velocidad crucero\n• Aire acondicionado\n• Dirección asistida\n• ABS y ESP\n• 6 Airbags',
+      features: '\n• Aire acondicionado\n• Dirección asistida\n• ABS\n• Airbags\n• Radio con Bluetooth\n• Cierre centralizado',
       location: 'Canelo 390 y Aeropuerto Internacional de Bariloche',
       whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20alquiler%20de%20Peugeot%20208'
     }

@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
@@ -56,28 +55,32 @@ const CategoryPage = () => {
         setSearchTerm={setSearchTerm} 
       />
       
-      <section className="py-16">
+      <section className="pb-16">
         <div className="page-container">
           <div className="flex flex-col md:flex-row gap-8">
-            {/* Filtros para pantallas grandes */}
-            <CategoryFilters 
-              subcategories={subcategories} 
-              selectedSubcategory={selectedSubcategory} 
-              setSelectedSubcategory={setSelectedSubcategory} 
-              hasActiveFilters={hasActiveFilters} 
-              clearFilters={clearFilters} 
-            />
+            {/* Filtros para pantallas grandes - no se muestran para alquiler de autos */}
+            {categoryId !== 'alquiler-autos' && (
+              <CategoryFilters 
+                subcategories={subcategories} 
+                selectedSubcategory={selectedSubcategory} 
+                setSelectedSubcategory={setSelectedSubcategory} 
+                hasActiveFilters={hasActiveFilters} 
+                clearFilters={clearFilters} 
+              />
+            )}
             
-            {/* Filtros para móvil */}
-            <CategoryMobileFilters 
-              isFilterOpen={isFilterOpen}
-              setIsFilterOpen={setIsFilterOpen}
-              hasActiveFilters={hasActiveFilters}
-              subcategories={subcategories} 
-              selectedSubcategory={selectedSubcategory} 
-              setSelectedSubcategory={setSelectedSubcategory} 
-              clearFilters={clearFilters} 
-            />
+            {/* Filtros para móvil - no se muestran para alquiler de autos */}
+            {categoryId !== 'alquiler-autos' && (
+              <CategoryMobileFilters 
+                isFilterOpen={isFilterOpen}
+                setIsFilterOpen={setIsFilterOpen}
+                hasActiveFilters={hasActiveFilters}
+                subcategories={subcategories} 
+                selectedSubcategory={selectedSubcategory} 
+                setSelectedSubcategory={setSelectedSubcategory} 
+                clearFilters={clearFilters} 
+              />
+            )}
             
             {/* Lista de tips */}
             <TipsList 

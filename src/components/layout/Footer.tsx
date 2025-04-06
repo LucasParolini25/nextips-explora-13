@@ -19,10 +19,10 @@ const Footer = () => {
               por expertos locales.
             </p>
             <div className="flex items-center space-x-4 pt-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-nextips-yellow transition-colors duration-300" aria-label="Síguenos en Instagram">
+              <a href="https://instagram.com/tipsnex" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-nextips-yellow transition-colors duration-300" aria-label="Síguenos en Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="mailto:info@nextips.com" className="text-white/80 hover:text-nextips-yellow transition-colors duration-300" aria-label="Envíanos un email">
+              <a href="mailto:nexrentalbrc@gmail.com" className="text-white/80 hover:text-nextips-yellow transition-colors duration-300" aria-label="Envíanos un email">
                 <Mail size={20} />
               </a>
             </div>
@@ -61,15 +61,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 text-gray-300">
                 <MapPin className="shrink-0 h-5 w-5 text-nextips-yellow mt-0.5" />
-                <span>Bariloche, Río Negro, Argentina</span>
+                <span>Canelo 390, Bariloche, Río Negro, Argentina</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-300">
                 <Phone className="shrink-0 h-5 w-5 text-nextips-yellow" />
-                <span>+54 294 123-4567</span>
+                <span>+54 9 2944674325</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-300">
                 <Mail className="shrink-0 h-5 w-5 text-nextips-yellow" />
-                <span>info@nextips.com</span>
+                <span>nexrentalbrc@gmail.com</span>
               </li>
             </ul>
           </div>

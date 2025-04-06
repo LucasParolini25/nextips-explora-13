@@ -1,4 +1,3 @@
-
 import { Tip } from "../../category/utils/categoryData";
 
 // Estructura para las categorías con subcategorías
@@ -23,7 +22,7 @@ export const categoryData: Category[] = [
         image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
         category: 'Excursiones',
         subcategory: 'Circuitos',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Circuito%20Chico'
+        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
       },
       {
         id: '4',
@@ -32,7 +31,7 @@ export const categoryData: Category[] = [
         image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05',
         category: 'Excursiones',
         subcategory: 'Montaña',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Cerro%20Catedral'
+        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
       },
       {
         id: '7',
@@ -41,7 +40,7 @@ export const categoryData: Category[] = [
         image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff',
         category: 'Excursiones',
         subcategory: 'Navegación',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Isla%20Victoria'
+        whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20Isla%20Victoria'
       },
       {
         id: '8',
@@ -50,7 +49,7 @@ export const categoryData: Category[] = [
         image: 'https://images.unsplash.com/photo-1615729947596-a598e5de0ab3',
         category: 'Excursiones',
         subcategory: 'Montaña',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Cerro%20Tronador'
+        whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20Cerro%20Tronador'
       }
     ]
   },
@@ -66,7 +65,7 @@ export const categoryData: Category[] = [
         image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
         category: 'Hospedajes',
         subcategory: 'Hoteles',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Hotel%20Vista%20Lago'
+        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
       },
       {
         id: '5',
@@ -75,7 +74,7 @@ export const categoryData: Category[] = [
         image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
         category: 'Hospedajes',
         subcategory: 'Cabañas',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Cabañas%20del%20Bosque'
+        whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20Cabañas%20del%20Bosque'
       },
       {
         id: '9',
@@ -84,7 +83,7 @@ export const categoryData: Category[] = [
         image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9',
         category: 'Hospedajes',
         subcategory: 'Hostels',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Hostel%20Patagonia'
+        whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20Hostel%20Patagonia'
       },
       {
         id: '10',
@@ -93,50 +92,32 @@ export const categoryData: Category[] = [
         image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716',
         category: 'Hospedajes',
         subcategory: 'Apartamentos',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Apart%20Hotel%20Cordillera'
+        whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20Apart%20Hotel%20Cordillera'
       }
     ]
   },
   {
     id: 'alquiler-autos',
     name: 'Alquiler de autos',
-    subcategories: ['SUV', 'Compactos', 'Vans', 'Camionetas'],
+    subcategories: ['Sedán', 'Hatchback'],
     tips: [
       {
-        id: '3',
-        title: 'SUV Todo Terreno',
-        description: 'Vehículos 4x4 ideales para recorrer caminos de montaña con seguridad y comodidad.',
-        image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb',
+        id: '1',
+        title: 'Fiat Cronos',
+        description: 'Sedán compacto ideal para la ciudad y viajes, con excelente consumo de combustible y amplio baúl.',
+        image: '/images/autos/fiat-cronos.webp',
         category: 'Alquiler de autos',
-        subcategory: 'SUV',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20SUV%20Todo%20Terreno'
+        subcategory: 'Sedán',
+        whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20alquiler%20de%20Fiat%20Cronos'
       },
       {
-        id: '6',
-        title: 'Económico Urbano',
-        description: 'Autos compactos para moverse en la ciudad con el mejor precio y menor consumo.',
-        image: 'https://images.unsplash.com/photo-1458668383970-8ddd3927deed',
+        id: '2',
+        title: 'Peugeot 208',
+        description: 'Hatchback moderno y dinámico, perfecto para moverse en la ciudad con estilo y comodidad.',
+        image: '/images/autos/peugeot-208.webp',
         category: 'Alquiler de autos',
-        subcategory: 'Compactos',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Auto%20Económico'
-      },
-      {
-        id: '11',
-        title: 'Van Familiar',
-        description: 'Vehículos espaciosos para grupos y familias, con capacidad desde 7 hasta 12 personas.',
-        image: 'https://images.unsplash.com/photo-1504893524553-b855bce32c67',
-        category: 'Alquiler de autos',
-        subcategory: 'Vans',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Van%20Familiar'
-      },
-      {
-        id: '12',
-        title: 'Camioneta 4x4',
-        description: 'Pick-ups de doble tracción para los terrenos más difíciles y aventuras extremas.',
-        image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb',
-        category: 'Alquiler de autos',
-        subcategory: 'Camionetas',
-        whatsappLink: 'https://wa.me/123456789?text=Consulta%20sobre%20Camioneta%204x4'
+        subcategory: 'Hatchback',
+        whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20alquiler%20de%20Peugeot%20208'
       }
     ]
   }

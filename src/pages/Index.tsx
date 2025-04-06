@@ -24,9 +24,9 @@ const FEATURED_TIPS = [
   },
   {
     id: '3',
-    title: 'SUV Todo Terreno',
-    description: 'Vehículos 4x4 ideales para recorrer caminos de montaña con seguridad y comodidad.',
-    image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb',
+    title: 'Fiat Cronos',
+    description: 'Sedán compacto ideal para la ciudad y viajes, con excelente consumo de combustible y amplio baúl.',
+    image: '/images/autos/fiat-cronos.webp',
     category: 'Alquiler de autos'
   },
   {
@@ -45,9 +45,9 @@ const FEATURED_TIPS = [
   },
   {
     id: '6',
-    title: 'Económico Urbano',
-    description: 'Autos compactos para moverse en la ciudad con el mejor precio y menor consumo.',
-    image: 'https://images.unsplash.com/photo-1458668383970-8ddd3927deed',
+    title: 'Peugeot 208',
+    description: 'Hatchback moderno y dinámico, perfecto para moverse en la ciudad con estilo y comodidad.',
+    image: '/images/autos/peugeot-208.webp',
     category: 'Alquiler de autos'
   }
 ];

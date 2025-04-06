@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -31,8 +30,8 @@ const TipCard = ({
     if (whatsappLink) {
       window.open(whatsappLink, '_blank');
     } else {
-      const text = `¡Mira este tip sobre ${title} en Bariloche! ${window.location.origin}/tip/${id}`;
-      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+      const text = `Hola, vi tu web y estoy interesado en saber más sobre ${title}`;
+      window.open(`https://wa.me/5492944674325?text=${encodeURIComponent(text)}`, '_blank');
     }
   };
 

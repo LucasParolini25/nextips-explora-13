@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -31,26 +30,28 @@ const Contact = () => {
     e.preventDefault();
     setFormStatus({ status: 'submitting' });
     
-    // Simular envío del formulario
+    // Redirigir a WhatsApp
+    const message = `Hola, vi tu web y estoy interesado en saber más.\n\nNombre: ${formData.name}\nEmail: ${formData.email}\nAsunto: ${formData.subject}\nMensaje: ${formData.message}`;
+    window.open(`https://wa.me/5492944674325?text=${encodeURIComponent(message)}`, '_blank');
+    
+    // Resetear formulario
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+    
+    // Mostrar mensaje de éxito
+    setFormStatus({
+      status: 'success',
+      message: '¡Mensaje enviado con éxito! Te redirigimos a WhatsApp para continuar la conversación.'
+    });
+    
+    // Resetear estado después de 5 segundos
     setTimeout(() => {
-      setFormStatus({
-        status: 'success',
-        message: '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.'
-      });
-      
-      // Resetear formulario
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Resetear estado después de 5 segundos
-      setTimeout(() => {
-        setFormStatus({ status: 'idle' });
-      }, 5000);
-    }, 1500);
+      setFormStatus({ status: 'idle' });
+    }, 5000);
   };
   
   return (
@@ -202,7 +203,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-white mb-1">Dirección</h3>
-                      <p className="text-gray-300">Mitre 123, San Carlos de Bariloche, Río Negro, Argentina</p>
+                      <p className="text-gray-300">Canelo 390, San Carlos de Bariloche, Río Negro, Argentina</p>
                     </div>
                   </div>
                   
@@ -212,7 +213,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-white mb-1">Email</h3>
-                      <p className="text-gray-300">info@nextips.com</p>
+                      <p className="text-gray-300">nexrentalbrc@gmail.com</p>
                     </div>
                   </div>
                   
@@ -222,7 +223,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-white mb-1">Teléfono</h3>
-                      <p className="text-gray-300">+54 294 123-4567</p>
+                      <p className="text-gray-300">+54 9 2944674325</p>
                     </div>
                   </div>
                   
@@ -232,7 +233,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-white mb-1">Instagram</h3>
-                      <p className="text-gray-300">@nextipsbariloche</p>
+                      <p className="text-gray-300">@tipsnex</p>
                     </div>
                   </div>
                 </div>

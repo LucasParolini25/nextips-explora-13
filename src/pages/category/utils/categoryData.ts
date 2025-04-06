@@ -1,4 +1,3 @@
-
 export interface Tip {
   id: string;
   title: string;
@@ -7,6 +6,9 @@ export interface Tip {
   category: string;
   subcategory?: string;
   whatsappLink?: string;
+  price?: string;
+  features?: string;
+  location?: string;
 }
 
 // Datos de ejemplo para las diferentes categorías
@@ -82,35 +84,27 @@ const TIPS_DATA: Record<string, Tip[]> = {
   'alquiler-autos': [
     {
       id: '3',
-      title: 'SUV Todo Terreno',
-      description: 'Vehículos 4x4 ideales para recorrer caminos de montaña con seguridad y comodidad.',
-      image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb',
+      title: 'Fiat Cronos',
+      description: 'Sedán compacto ideal para la ciudad y viajes, con excelente consumo de combustible y amplio baúl.',
+      image: '/images/autos/fiat-cronos.webp',
       category: 'Alquiler de autos',
-      subcategory: 'SUV'
+      subcategory: 'Sedán',
+      price: 'A consultar',
+      features: '\n• Aire acondicionado\n• Dirección asistida\n• ABS\n• Airbags\n• Radio con Bluetooth\n• Cierre centralizado',
+      location: 'Canelo 390 y Aeropuerto Internacional de Bariloche',
+      whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20alquiler%20de%20Fiat%20Cronos'
     },
     {
       id: '6',
-      title: 'Económico Urbano',
-      description: 'Autos compactos para moverse en la ciudad con el mejor precio y menor consumo.',
-      image: 'https://images.unsplash.com/photo-1458668383970-8ddd3927deed',
+      title: 'Peugeot 208',
+      description: 'Hatchback moderno y dinámico, perfecto para moverse en la ciudad con estilo y comodidad.',
+      image: '/images/autos/peugeot-208.webp',
       category: 'Alquiler de autos',
-      subcategory: 'Compactos'
-    },
-    {
-      id: '11',
-      title: 'Van Familiar',
-      description: 'Vehículos espaciosos para grupos y familias, con capacidad desde 7 hasta 12 personas.',
-      image: 'https://images.unsplash.com/photo-1504893524553-b855bce32c67',
-      category: 'Alquiler de autos',
-      subcategory: 'Vans'
-    },
-    {
-      id: '12',
-      title: 'Camioneta 4x4',
-      description: 'Pick-ups de doble tracción para los terrenos más difíciles y aventuras extremas.',
-      image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb',
-      category: 'Alquiler de autos',
-      subcategory: 'Camionetas'
+      subcategory: 'Hatchback',
+      price: 'A consultar',
+      features: '\n• Pantalla táctil multimedia\n• Android Auto/Apple CarPlay\n• Sensores de estacionamiento\n• Control de velocidad crucero\n• Aire acondicionado\n• Dirección asistida\n• ABS y ESP\n• 6 Airbags',
+      location: 'Canelo 390 y Aeropuerto Internacional de Bariloche',
+      whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20alquiler%20de%20Peugeot%20208'
     }
   ]
 };

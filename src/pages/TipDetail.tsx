@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
@@ -23,7 +22,7 @@ const ALL_TIPS = [
     price: 'Desde $15.000',
     duration: '4 horas',
     location: 'Salida desde el Centro Cívico',
-    whatsappLink: 'https://wa.me/5492944123456?text=Hola%2C%20me%20interesa%20el%20Circuito%20Chico'
+    whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
   },
   {
     id: '2',
@@ -41,25 +40,39 @@ const ALL_TIPS = [
     price: 'Desde $45.000 por noche',
     amenities: 'WiFi, Desayuno, Spa, Piscina climatizada',
     location: 'Av. Bustillo km 8',
-    whatsappLink: 'https://wa.me/5492944123456?text=Hola%2C%20me%20interesa%20reservar%20en%20Hotel%20Vista%20Lago'
+    whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
   },
   {
     id: '3',
-    title: 'SUV Todo Terreno',
-    description: 'Vehículos 4x4 ideales para recorrer caminos de montaña con seguridad y comodidad.',
-    fullDescription: 'Nuestros SUVs Todo Terreno son la mejor opción para recorrer los caminos de Bariloche con total seguridad y confort. Contamos con una flota de vehículos 4x4 de primeras marcas, totalmente equipados para la conducción en montaña y condiciones invernales. Todos incluyen sistemas de tracción integral, control de estabilidad, neumáticos todo terreno y equipamiento completo de seguridad. Perfectos para visitar destinos como el Cerro Tronador, Villa Traful o la Ruta de los Siete Lagos, donde los caminos de ripio requieren vehículos con buena altura.',
-    image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb',
+    title: 'Fiat Cronos',
+    description: 'Sedán compacto ideal para la ciudad y viajes, con excelente consumo de combustible y amplio baúl.',
+    fullDescription: 'El Fiat Cronos es la opción perfecta para quienes buscan un sedán moderno y eficiente. Con un amplio baúl de 525 litros, es ideal para viajes y equipaje. Su motor eficiente ofrece un excelente consumo de combustible, mientras que su equipamiento incluye aire acondicionado, dirección asistida, y sistemas de seguridad modernos. El interior espacioso garantiza comodidad tanto para el conductor como para los pasajeros.',
+    image: '/images/autos/fiat-cronos.webp',
     gallery: [
-      'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb',
-      'https://images.unsplash.com/photo-1504893524553-b855bce32c67',
-      'https://images.unsplash.com/photo-1615729947596-a598e5de0ab3'
+      '/images/autos/fiat-cronos.webp'
     ],
     category: 'Alquiler de autos',
-    subcategory: 'SUV',
-    price: 'Desde $35.000 por día',
-    features: 'Tracción 4x4, GPS, Asistencia 24hs',
-    location: 'Av. Bustillo km 1',
-    whatsappLink: 'https://wa.me/5492944123456?text=Hola%2C%20me%20interesa%20alquilar%20un%20SUV%20Todo%20Terreno'
+    subcategory: 'Sedán',
+    price: 'A consultar',
+    features: '\n• Aire acondicionado\n• Dirección asistida\n• ABS\n• Airbags\n• Radio con Bluetooth\n• Cierre centralizado',
+    location: 'Canelo 390 y/o Aeropuerto Internacional de Bariloche',
+    whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20alquiler%20de%20Fiat%20Cronos'
+  },
+  {
+    id: '6',
+    title: 'Peugeot 208',
+    description: 'Hatchback moderno y dinámico, perfecto para moverse en la ciudad con estilo y comodidad.',
+    fullDescription: 'El Peugeot 208 combina diseño moderno con tecnología de vanguardia. Su tamaño compacto lo hace perfecto para la ciudad, mientras que su interior premium ofrece una experiencia de conducción superior. Equipado con la última tecnología en seguridad y conectividad, incluyendo pantalla táctil con Android Auto y Apple CarPlay. Su eficiente motor garantiza un excelente rendimiento de combustible sin sacrificar potencia.',
+    image: '/images/autos/peugeot-208.webp',
+    gallery: [
+      '/images/autos/peugeot-208.webp'
+    ],
+    category: 'Alquiler de autos',
+    subcategory: 'Hatchback',
+    price: 'A consultar',
+    features: '\n• Pantalla táctil multimedia\n• Android Auto/Apple CarPlay\n• Sensores de estacionamiento\n• Control de velocidad crucero\n• Aire acondicionado\n• Dirección asistida\n• ABS y ESP\n• 6 Airbags',
+    location: 'Canelo 390 y/o Aeropuerto Internacional de Bariloche',
+    whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20alquiler%20de%20Peugeot%20208'
   },
   // ... puedes agregar el resto de los tips aquí
 ];
@@ -183,42 +196,62 @@ const TipDetail = () => {
                 <p className="text-gray-300">{tip.description}</p>
               </div>
               
-              <div className="space-y-4 mb-8">
+              <div className="space-y-6 mb-8">
                 {tip.price && (
-                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                    <span className="text-gray-300">Precio:</span>
-                    <span className="font-medium text-white">{tip.price}</span>
+                  <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                    <span className="text-lg text-gray-300">Precio:</span>
+                    <span className="font-medium text-xl text-white">{tip.price}</span>
                   </div>
                 )}
                 
+                {tip.features && (
+                  <div className="border-b border-white/10 pb-4">
+                    <span className="text-lg text-gray-300 block mb-3">Características:</span>
+                    <div className="bg-nextips-darkBlue/30 rounded-lg p-4">
+                      <div className="grid grid-cols-1 gap-2 text-white">
+                        {tip.features.split('\n').filter(Boolean).map((feature, index) => (
+                          <div key={index} className="flex items-center">
+                            <div className="w-2 h-2 bg-nextips-aqua rounded-full mr-3"></div>
+                            <span>{feature.replace('•', '').trim()}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {tip.location && (
+                  <div className="border-b border-white/10 pb-4">
+                    <span className="text-lg text-gray-300 block mb-3">Ubicación:</span>
+                    <div className="bg-nextips-darkBlue/30 rounded-lg p-4">
+                      <div className="flex items-start">
+                        <MapPin className="h-5 w-5 mr-3 mt-1 text-nextips-aqua shrink-0" />
+                        <div className="space-y-2">
+                          <div className="flex items-center">
+                            <div className="w-2 h-2 bg-nextips-aqua rounded-full mr-3"></div>
+                            <span className="text-white">Canelo 390</span>
+                          </div>
+                          <div className="flex items-center">
+                            <div className="w-2 h-2 bg-nextips-aqua rounded-full mr-3"></div>
+                            <span className="text-white">Aeropuerto Internacional de Bariloche</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {tip.duration && (
-                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                    <span className="text-gray-300">Duración:</span>
+                  <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                    <span className="text-lg text-gray-300">Duración:</span>
                     <span className="font-medium text-white">{tip.duration}</span>
                   </div>
                 )}
                 
                 {tip.amenities && (
-                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                    <span className="text-gray-300">Servicios:</span>
+                  <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                    <span className="text-lg text-gray-300">Servicios:</span>
                     <span className="font-medium text-white">{tip.amenities}</span>
-                  </div>
-                )}
-                
-                {tip.features && (
-                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                    <span className="text-gray-300">Características:</span>
-                    <span className="font-medium text-white">{tip.features}</span>
-                  </div>
-                )}
-                
-                {tip.location && (
-                  <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                    <span className="text-gray-300">Ubicación:</span>
-                    <div className="flex items-center font-medium text-white">
-                      <MapPin className="h-4 w-4 mr-1 text-nextips-aqua" />
-                      {tip.location}
-                    </div>
                   </div>
                 )}
               </div>

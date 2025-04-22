@@ -16,40 +16,118 @@ export const categoryData: Category[] = [
     subcategories: ['Circuitos', 'Aventura', 'Gastronomía'],
     tips: [
       {
-        id: '1',
+        id: 'circuito-chico',
         title: 'Circuito Chico',
-        description: 'Recorrido panorámico de 60 km que bordea lagos y miradores con vistas increíbles.',
-        image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+        description: 'Paseo de increíbles vistas panorámicas bordeando el lago Nahuel Huapi, incluyendo ascenso al Cerro Campanario.',
+        image: '/images/excursiones/circuito-chico/main.webp',
+        gallery: [
+          '/images/excursiones/circuito-chico/main.webp',
+          '/images/excursiones/circuito-chico/campanario.webp',
+          '/images/excursiones/circuito-chico/llao-llao.webp',
+          '/images/excursiones/circuito-chico/panoramica.webp'
+        ],
         category: 'Excursiones',
         subcategory: 'Circuitos',
-        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
+        price: '$40.000',
+        duration: '5 horas',
+        excursionType: 'TERRESTRE',
+        meetingPoint: 'Centro Cívico',
+        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20me%20interesa%20la%20excursión%20Circuito%20Chico'
       },
       {
-        id: '4',
-        title: 'Cerro Catedral',
-        description: 'El centro de esquí más grande de Sudamérica, con pistas para todos los niveles.',
-        image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05',
+        id: 'siete-lagos',
+        title: 'Ruta 7 Lagos',
+        description: 'Recorrido por la emblemática ruta 40 atravesando los más bellos lagos de la Patagonia hasta San Martín de los Andes.',
+        image: '/images/excursiones/siete-lagos/main.webp',
+        gallery: [
+          '/images/excursiones/siete-lagos/main.webp',
+          '/images/excursiones/siete-lagos/san-martin.webp',
+          '/images/excursiones/siete-lagos/lagos.webp',
+          '/images/excursiones/siete-lagos/ruta.webp'
+        ],
+        category: 'Excursiones',
+        subcategory: 'Circuitos',
+        price: '$70.000',
+        duration: 'De 08:00 a 18:30 hs',
+        excursionType: 'TERRESTRE',
+        meetingPoint: 'Hotel del pasajero',
+        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20me%20interesa%20la%20excursión%20Siete%20Lagos'
+      },
+      {
+        id: 'tronador',
+        title: 'Cerro Tronador y Ventisquero Negro',
+        description: 'Excursión al pie del cerro más alto del Parque Nacional, con vista al impresionante Ventisquero Negro.',
+        image: '/images/excursiones/tronador/main.webp',
+        gallery: [
+          '/images/excursiones/tronador/main.webp',
+          '/images/excursiones/tronador/ventisquero.webp',
+          '/images/excursiones/tronador/cascada.webp',
+          '/images/excursiones/tronador/pampa.webp'
+        ],
         category: 'Excursiones',
         subcategory: 'Montaña',
-        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
+        price: '$70.000',
+        duration: 'De 09:00 a 18:00 hs',
+        excursionType: 'TERRESTRE',
+        meetingPoint: 'Hotel del pasajero',
+        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20me%20interesa%20la%20excursión%20Cerro%20Tronador'
       },
       {
-        id: '7',
+        id: 'isla-victoria',
         title: 'Isla Victoria y Bosque de Arrayanes',
-        description: 'Navegación por el Nahuel Huapi para conocer la isla y su famoso bosque centenario.',
-        image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff',
+        description: 'Navegación por el Nahuel Huapi visitando la Isla Victoria y el único bosque de arrayanes del mundo.',
+        image: '/images/excursiones/isla-victoria/main.webp',
+        gallery: [
+          '/images/excursiones/isla-victoria/main.webp',
+          '/images/excursiones/isla-victoria/arrayanes.webp',
+          '/images/excursiones/isla-victoria/playa.webp',
+          '/images/excursiones/isla-victoria/navegacion.webp'
+        ],
         category: 'Excursiones',
         subcategory: 'Navegación',
-        whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20Isla%20Victoria'
+        price: '$140.000',
+        duration: '5 horas',
+        excursionType: 'LACUSTRE',
+        meetingPoint: 'Puerto Pañuelo',
+        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20me%20interesa%20la%20excursión%20Isla%20Victoria'
       },
       {
-        id: '8',
-        title: 'Cerro Tronador',
-        description: 'Excursión de día completo al imponente cerro con vistas al Glaciar Negro.',
-        image: 'https://images.unsplash.com/photo-1615729947596-a598e5de0ab3',
+        id: 'puerto-blest',
+        title: 'Puerto Blest y Cascada de los Cantaros',
+        description: 'Navegación por el brazo Blest del Nahuel Huapi, visitando la Cascada de los Cántaros y la selva Valdiviana.',
+        image: '/images/excursiones/puerto-blest/main.webp',
+        gallery: [
+          '/images/excursiones/puerto-blest/main.webp',
+          '/images/excursiones/puerto-blest/cascada.webp',
+          '/images/excursiones/puerto-blest/selva.webp',
+          '/images/excursiones/puerto-blest/navegacion.webp'
+        ],
         category: 'Excursiones',
-        subcategory: 'Montaña',
-        whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20Cerro%20Tronador'
+        subcategory: 'Navegación',
+        price: '$140.000',
+        duration: 'De 09:00 a 17:30 hs',
+        excursionType: 'LACUSTRE',
+        meetingPoint: 'Puerto Pañuelo',
+        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20me%20interesa%20la%20excursión%20Puerto%20Blest'
+      },
+      {
+        id: 'bolson',
+        title: 'El Bolsón y Lago Puelo',
+        description: 'Visita a la famosa Feria Artesanal de El Bolsón y al hermoso Lago Puelo.',
+        image: '/images/excursiones/bolson/main.webp',
+        gallery: [
+          '/images/excursiones/bolson/main.webp',
+          '/images/excursiones/bolson/feria.webp',
+          '/images/excursiones/bolson/lago-puelo.webp',
+          '/images/excursiones/bolson/productos.webp'
+        ],
+        category: 'Excursiones',
+        subcategory: 'Circuitos',
+        price: '$70.000',
+        duration: 'De 08:30 a 18:30 hs',
+        excursionType: 'TERRESTRE',
+        meetingPoint: 'Hotel del pasajero',
+        whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20me%20interesa%20la%20excursión%20El%20Bolsón'
       }
     ]
   },

@@ -26,9 +26,9 @@ const ALL_TIPS = [
   },
   {
     id: '2',
-    title: 'Hotel Vista Lago',
-    description: 'Ubicado a orillas del Nahuel Huapi con habitaciones de lujo y spa con vista al lago.',
-    fullDescription: 'El Hotel Vista Lago es un alojamiento de categoría superior ubicado en una posición privilegiada a orillas del lago Nahuel Huapi. Todas sus habitaciones ofrecen impresionantes vistas al lago y a la cordillera. El hotel cuenta con spa completo, piscina climatizada, restaurante gourmet especializado en gastronomía patagónica y servicio de concierge para ayudarte a organizar todas tus actividades durante la estadía. Su ubicación permite fácil acceso tanto al centro de la ciudad como a las principales atracciones naturales.',
+    title: 'Hotel Boutique Bariloche',
+    description: 'Elegancia Patagónica con Vistas al Nahuel Huapi',
+    fullDescription: 'Disfruta de una experiencia única con vistas panorámicas al Nahuel Huapi y servicios premium como spa y piscina climatizada. Ideal para parejas, familias o viajes en grupo, nuestro hotel combina elegancia con la calidez patagónica. ¡Reserva ahora y vive Bariloche con todo el confort!',
     image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
     gallery: [
       'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
@@ -37,10 +37,28 @@ const ALL_TIPS = [
     ],
     category: 'Hospedajes',
     subcategory: 'Hoteles',
-    price: 'Desde $45.000 por noche',
-    amenities: 'WiFi, Desayuno, Spa, Piscina climatizada',
-    location: 'Av. Bustillo km 8',
-    whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
+    price: 'A consultar',
+    amenities: 'Habitaciones con vista al lago, Departamentos amplios para familias, Full House (exclusividad para grupos)',
+    location: 'Los Cerezos 5407, San Carlos de Bariloche',
+    whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20estoy%20interesado%20en%20el%20Hotel%20Boutique%20Bariloche'
+  },
+  {
+    id: '5',
+    title: 'Cabañas Pura Vida',
+    description: 'Descanso y comodidad cerca del lago y la ciudad',
+    fullDescription: 'Viví la experiencia de Bariloche desde una cabaña cálida y cómoda, con parrilla y cochera propia. A metros del Lago Nahuel Huapi y con fácil acceso al centro, Cabañas Pura Visa es perfecta para familias, parejas o viajeros que buscan tranquilidad sin alejarse de todo.',
+    image: 'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8',
+    gallery: [
+      'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8',
+      'https://images.unsplash.com/photo-1470770841072-f978cf4d019e',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b'
+    ],
+    category: 'Hospedajes',
+    subcategory: 'Cabañas',
+    price: 'A consultar',
+    amenities: 'Cabañas familiares con 2 habitaciones, Estilo dúplex con espacio verde',
+    location: 'Cabildo 150, R8400 San Carlos de Bariloche',
+    whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20me%20interesan%20las%20Cabañas%20Pura%20Vida'
   },
   {
     id: '3',
@@ -223,7 +241,7 @@ const TipDetail = () => {
                       </div>
                     )}
                     
-                    {tip.features && (
+                    {tip.features && tip.category === 'Alquiler de autos' && (
                       <div className="border-b border-white/10 pb-4">
                         <span className="text-lg text-gray-300 block mb-3">Características:</span>
                         <div className="bg-nextips-darkBlue/30 rounded-lg p-4">
@@ -238,8 +256,47 @@ const TipDetail = () => {
                         </div>
                       </div>
                     )}
-                    
-                    {tip.location && (
+
+                    {/* Sección específica para Hospedajes */}
+                    {tip.category === 'Hospedajes' && (
+                      <>
+                        {tip.amenities && (
+                          <div className="border-b border-white/10 pb-4">
+                            <span className="text-lg text-gray-300 block mb-3">Habitaciones:</span>
+                            <div className="bg-nextips-darkBlue/30 rounded-lg p-4">
+                              <div className="space-y-2">
+                                {tip.amenities.split(',').map((amenity, index) => (
+                                  <div key={index} className="flex items-center">
+                                    <div className="w-2 h-2 bg-nextips-aqua rounded-full mr-3"></div>
+                                    <span className="text-white">{amenity.trim()}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                        
+                        {tip.location && (
+                          <div className="border-b border-white/10 pb-4">
+                            <span className="text-lg text-gray-300 block mb-3">Ubicación:</span>
+                            <div className="bg-nextips-darkBlue/30 rounded-lg p-4">
+                              <div className="flex items-start">
+                                <MapPin className="h-5 w-5 mr-3 mt-1 text-nextips-aqua shrink-0" />
+                                <div className="space-y-2">
+                                  <div className="flex items-center">
+                                    <div className="w-2 h-2 bg-nextips-aqua rounded-full mr-3"></div>
+                                    <span className="text-white">Los Cerezos 5407, San Carlos de Bariloche</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </>
+                    )}
+
+                    {/* Sección específica para Alquiler de autos */}
+                    {tip.category === 'Alquiler de autos' && tip.location && (
                       <div className="border-b border-white/10 pb-4">
                         <span className="text-lg text-gray-300 block mb-3">Ubicación:</span>
                         <div className="bg-nextips-darkBlue/30 rounded-lg p-4">
@@ -260,18 +317,32 @@ const TipDetail = () => {
                       </div>
                     )}
 
-                    {tip.duration && (
-                      <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                        <span className="text-lg text-gray-300">Duración:</span>
-                        <span className="font-medium text-white">{tip.duration}</span>
-                      </div>
-                    )}
-                    
-                    {tip.amenities && (
-                      <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                        <span className="text-lg text-gray-300">Servicios:</span>
-                        <span className="font-medium text-white">{tip.amenities}</span>
-                      </div>
+                    {/* Sección específica para Excursiones */}
+                    {tip.category === 'Excursiones' && (
+                      <>
+                        {tip.duration && (
+                          <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                            <span className="text-lg text-gray-300">Duración:</span>
+                            <span className="font-medium text-white">{tip.duration}</span>
+                          </div>
+                        )}
+                        {tip.location && (
+                          <div className="border-b border-white/10 pb-4">
+                            <span className="text-lg text-gray-300 block mb-3">Punto de encuentro:</span>
+                            <div className="bg-nextips-darkBlue/30 rounded-lg p-4">
+                              <div className="flex items-start">
+                                <MapPin className="h-5 w-5 mr-3 mt-1 text-nextips-aqua shrink-0" />
+                                <div className="space-y-2">
+                                  <div className="flex items-center">
+                                    <div className="w-2 h-2 bg-nextips-aqua rounded-full mr-3"></div>
+                                    <span className="text-white">{tip.location}</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </>
                     )}
                   </div>
                   
@@ -300,7 +371,10 @@ const TipDetail = () => {
             {/* Descripción completa */}
             <div className="mt-12">
               <h2 className="text-2xl font-bold text-white mb-6">
-                {tip.category === 'Alquiler de autos' ? 'Requisitos para alquilar' : `Sobre ${tip.title}`}
+                {tip.category === 'Alquiler de autos' ? 'Requisitos para alquilar' : 
+                 tip.category === 'Hospedajes' ? 'Sobre el alojamiento' :
+                 tip.category === 'Excursiones' ? `Sobre la excursión` : 
+                 `Sobre ${tip.title}`}
               </h2>
               <div className="bg-nextips-darkBlue/20 backdrop-blur-sm rounded-xl p-8 border border-white/10">
                 {tip.category === 'Alquiler de autos' ? (
@@ -314,6 +388,35 @@ const TipDetail = () => {
                     <p className="mt-4 text-sm bg-nextips-darkBlue/30 p-4 rounded-lg">
                       <span className="text-nextips-yellow">Nota importante:</span> El monto de garantía bloqueado en la tarjeta de crédito puede disminuir al contratar un seguro adicional con la rentadora.
                     </p>
+                  </div>
+                ) : tip.category === 'Hospedajes' ? (
+                  <div className="space-y-4 text-gray-200 leading-relaxed">
+                    <p className="font-medium text-nextips-aqua mb-2">Información del alojamiento:</p>
+                    <div className="space-y-4">
+                      <p>{tip.fullDescription}</p>
+                      <ul className="list-disc pl-5 space-y-2 mt-4">
+                        <li>Check-in: 14:00 hs</li>
+                        <li>Check-out: 10:00 hs</li>
+                        <li>Se aceptan mascotas (consultar condiciones)</li>
+                        <li>WiFi gratuito en todas las instalaciones</li>
+                      </ul>
+                    </div>
+                  </div>
+                ) : tip.category === 'Excursiones' ? (
+                  <div className="space-y-4 text-gray-200 leading-relaxed">
+                    <p className="font-medium text-nextips-aqua mb-2">Detalles de la excursión:</p>
+                    <div className="space-y-4">
+                      <p>{tip.fullDescription}</p>
+                      <div className="mt-4 bg-nextips-darkBlue/30 p-4 rounded-lg">
+                        <p className="font-medium text-nextips-yellow mb-2">Recomendaciones:</p>
+                        <ul className="list-disc pl-5 space-y-2">
+                          <li>Ropa y calzado cómodo</li>
+                          <li>Protector solar</li>
+                          <li>Agua y snacks</li>
+                          <li>Cámara fotográfica</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 ) : (
                   <p className="text-gray-200 leading-relaxed">{tip.fullDescription}</p>

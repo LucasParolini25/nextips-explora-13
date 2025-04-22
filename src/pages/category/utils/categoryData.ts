@@ -10,6 +10,8 @@ export interface Tip {
   price?: string;
   features?: string;
   location?: string;
+  amenities?: string;
+  fullDescription?: string;
 }
 
 // Datos de ejemplo para las diferentes categorías
@@ -53,37 +55,28 @@ const TIPS_DATA: Record<string, Tip[]> = {
   'hospedajes': [
     {
       id: '2',
-      title: 'Hotel Vista Lago',
-      description: 'Ubicado a orillas del Nahuel Huapi con habitaciones de lujo y spa con vista al lago.',
+      title: 'Hotel Boutique Bariloche',
+      description: 'Elegancia Patagónica con Vistas al Nahuel Huapi',
       image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
       category: 'Hospedajes',
       subcategory: 'Hoteles',
-      price: 'Desde $45.000 por noche',
+      price: 'A consultar',
+      features: '\n• Habitaciones con vista al lago\n• Departamentos amplios para familias\n• Full House (exclusividad para grupos)',
+      location: 'Los Cerezos 5407, San Carlos de Bariloche',
       whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20vi%20tu%20web%20y%20estoy%20interesado%20en%20saber%20más'
     },
     {
       id: '5',
-      title: 'Cabañas del Bosque',
-      description: 'Alojamiento rústico y acogedor rodeado de bosques nativos y arroyos cristalinos.',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+      title: 'Cabañas Pura Vida',
+      description: 'Descanso y comodidad cerca del lago y la ciudad',
+      image: 'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8',
       category: 'Hospedajes',
-      subcategory: 'Cabañas'
-    },
-    {
-      id: '9',
-      title: 'Hostel Patagonia',
-      description: 'Alojamiento económico con ambiente internacional y excelente ubicación en el centro.',
-      image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9',
-      category: 'Hospedajes',
-      subcategory: 'Hostels'
-    },
-    {
-      id: '10',
-      title: 'Apart Hotel Cordillera',
-      description: 'Departamentos totalmente equipados con servicio de hotel y excelentes vistas.',
-      image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716',
-      category: 'Hospedajes',
-      subcategory: 'Apartamentos'
+      subcategory: 'Cabañas',
+      price: 'A consultar',
+      amenities: 'Cabañas familiares con 2 habitaciones, Estilo dúplex con espacio verde',
+      location: 'Cabildo 150, R8400 San Carlos de Bariloche',
+      fullDescription: 'Viví la experiencia de Bariloche desde una cabaña cálida y cómoda, con parrilla y cochera propia. A metros del Lago Nahuel Huapi y con fácil acceso al centro, Cabañas Pura Visa es perfecta para familias, parejas o viajeros que buscan tranquilidad sin alejarse de todo.',
+      whatsappLink: 'https://wa.me/5492944674325?text=Hola%2C%20me%20interesan%20las%20Cabañas%20Pura%20Vida'
     }
   ],
   'alquiler-autos': [
@@ -134,7 +127,7 @@ const CATEGORY_TITLES: Record<string, string> = {
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'excursiones': 'Descubre las mejores actividades y circuitos para explorar la belleza natural de Bariloche.',
-  'hospedajes': 'Encuentra el alojamiento perfecto para tu estadía en Bariloche, desde hoteles de lujo hasta cabañas acogedoras.',
+  'hospedajes': 'Encuentra el alojamiento perfecto para tu estadía en Bariloche, desde hoteles y cabañas hasta hosteles.',
   'alquiler-autos': 'Compara y elige el vehículo ideal para moverte con libertad durante tu visita a la Patagonia.',
 };
 

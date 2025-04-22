@@ -169,7 +169,7 @@ export const categoryData: Category[] = [
     subcategories: ['Sedán', 'Hatchback'],
     tips: [
       {
-        id: '1',
+        id: '3',
         title: 'Fiat Cronos',
         description: 'Sedán compacto ideal para la ciudad y viajes, con excelente consumo de combustible y amplio baúl.',
         image: '/images/autos/fiat-cronos.webp',
@@ -178,7 +178,7 @@ export const categoryData: Category[] = [
         whatsappLink: 'https://wa.me/5492944674325?text=Consulta%20sobre%20alquiler%20de%20Fiat%20Cronos'
       },
       {
-        id: '2',
+        id: '6',
         title: 'Peugeot 208',
         description: 'Hatchback moderno y dinámico, perfecto para moverse en la ciudad con estilo y comodidad.',
         image: '/images/autos/peugeot-208.webp',

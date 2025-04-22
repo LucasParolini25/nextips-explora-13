@@ -36,8 +36,7 @@ const TipCard = ({
   };
 
   const shareOnInstagram = () => {
-    // Como Instagram no permite compartir directamente, abrimos la app
-    window.open('https://www.instagram.com/', '_blank');
+    window.open('https://www.instagram.com/tipsnex/', '_blank');
   };
 
   return (

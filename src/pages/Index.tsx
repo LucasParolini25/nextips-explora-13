@@ -5,52 +5,23 @@ import Hero from '@/components/home/Hero';
 import CategorySection from '@/components/home/CategorySection';
 import TipCard from '@/components/ui/TipCard';
 import { ChevronRight } from 'lucide-react';
+import { categoryData } from '@/pages/admin/utils/adminData';
 
-// Datos de ejemplo para los tips destacados
+// Seleccionar un tip de cada categoría para mostrar
 const FEATURED_TIPS = [
-  {
-    id: '1',
-    title: 'Circuito Chico',
-    description: 'Recorrido panorámico de 60 km que bordea lagos y miradores con vistas increíbles.',
-    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
-    category: 'Excursiones'
-  },
-  {
-    id: '2',
-    title: 'Hotel Vista Lago',
-    description: 'Ubicado a orillas del Nahuel Huapi con habitaciones de lujo y spa con vista al lago.',
-    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
-    category: 'Hospedajes'
-  },
-  {
-    id: '3',
-    title: 'Fiat Cronos',
-    description: 'Sedán compacto ideal para la ciudad y viajes, con excelente consumo de combustible y amplio baúl.',
-    image: '/images/autos/fiat-cronos.webp',
-    category: 'Alquiler de autos'
-  },
-  {
-    id: '4',
-    title: 'Cerro Catedral',
-    description: 'El centro de esquí más grande de Sudamérica, con pistas para todos los niveles.',
-    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05',
-    category: 'Excursiones'
-  },
-  {
-    id: '5',
-    title: 'Cabañas del Bosque',
-    description: 'Alojamiento rústico y acogedor rodeado de bosques nativos y arroyos cristalinos.',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
-    category: 'Hospedajes'
-  },
-  {
-    id: '6',
-    title: 'Peugeot 208',
-    description: 'Hatchback moderno y dinámico, perfecto para moverse en la ciudad con estilo y comodidad.',
-    image: '/images/autos/peugeot-208.webp',
-    category: 'Alquiler de autos'
-  }
-];
+  // Excursión destacada
+  categoryData.find(cat => cat.id === 'excursiones')?.tips[0],
+  // Hospedaje destacado
+  categoryData.find(cat => cat.id === 'hospedajes')?.tips[0],
+  // Auto destacado
+  categoryData.find(cat => cat.id === 'alquiler-autos')?.tips[0],
+  // Otra excursión
+  categoryData.find(cat => cat.id === 'excursiones')?.tips[1],
+  // Otro hospedaje
+  categoryData.find(cat => cat.id === 'hospedajes')?.tips[1],
+  // Otro auto
+  categoryData.find(cat => cat.id === 'alquiler-autos')?.tips[1],
+].filter(tip => tip !== undefined);
 
 const Index = () => {
   useEffect(() => {

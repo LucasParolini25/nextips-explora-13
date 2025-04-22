@@ -29,11 +29,13 @@ const ALL_TIPS = [
     title: 'Hotel Boutique Bariloche',
     description: 'Elegancia Patagónica con Vistas al Nahuel Huapi',
     fullDescription: 'Disfruta de una experiencia única con vistas panorámicas al Nahuel Huapi y servicios premium como spa y piscina climatizada. Ideal para parejas, familias o viajes en grupo, nuestro hotel combina elegancia con la calidez patagónica. ¡Reserva ahora y vive Bariloche con todo el confort!',
-    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
+    image: '/images/hospedajes/hotel-boutique/main.webp',
     gallery: [
-      'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
-      'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9'
+      '/images/hospedajes/hotel-boutique/main.webp',
+      '/images/hospedajes/hotel-boutique/room.webp',
+      '/images/hospedajes/hotel-boutique/room2.webp',
+      '/images/hospedajes/hotel-boutique/view.webp',
+      '/images/hospedajes/hotel-boutique/lobby.webp'
     ],
     category: 'Hospedajes',
     subcategory: 'Hoteles',
@@ -47,11 +49,12 @@ const ALL_TIPS = [
     title: 'Cabañas Pura Vida',
     description: 'Descanso y comodidad cerca del lago y la ciudad',
     fullDescription: 'Viví la experiencia de Bariloche desde una cabaña cálida y cómoda, con parrilla y cochera propia. A metros del Lago Nahuel Huapi y con fácil acceso al centro, Cabañas Pura Visa es perfecta para familias, parejas o viajeros que buscan tranquilidad sin alejarse de todo.',
-    image: 'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8',
+    image: '/images/hospedajes/cabanas-pura-vida/main.webp',
     gallery: [
-      'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8',
-      'https://images.unsplash.com/photo-1470770841072-f978cf4d019e',
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b'
+      '/images/hospedajes/cabanas-pura-vida/main.webp',
+      '/images/hospedajes/cabanas-pura-vida/interior.webp',
+      '/images/hospedajes/cabanas-pura-vida/exterior.webp',
+      '/images/hospedajes/cabanas-pura-vida/garden.webp'
     ],
     category: 'Hospedajes',
     subcategory: 'Cabañas',

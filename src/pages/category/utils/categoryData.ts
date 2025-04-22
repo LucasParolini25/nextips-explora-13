@@ -57,7 +57,14 @@ const TIPS_DATA: Record<string, Tip[]> = {
       id: '2',
       title: 'Hotel Boutique Bariloche',
       description: 'Elegancia Patagónica con Vistas al Nahuel Huapi',
-      image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07',
+      image: '/images/hospedajes/hotel-boutique/main.webp',
+      gallery: [
+        '/images/hospedajes/hotel-boutique/main.webp',
+        '/images/hospedajes/hotel-boutique/room.webp',
+        '/images/hospedajes/hotel-boutique/room2.webp',
+        '/images/hospedajes/hotel-boutique/view.webp',
+        '/images/hospedajes/hotel-boutique/lobby.webp'
+      ],
       category: 'Hospedajes',
       subcategory: 'Hoteles',
       price: 'A consultar',
@@ -69,7 +76,13 @@ const TIPS_DATA: Record<string, Tip[]> = {
       id: '5',
       title: 'Cabañas Pura Vida',
       description: 'Descanso y comodidad cerca del lago y la ciudad',
-      image: 'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8',
+      image: '/images/hospedajes/cabanas-pura-vida/main.webp',
+      gallery: [
+        '/images/hospedajes/cabanas-pura-vida/main.webp',
+        '/images/hospedajes/cabanas-pura-vida/interior.webp',
+        '/images/hospedajes/cabanas-pura-vida/exterior.webp',
+        '/images/hospedajes/cabanas-pura-vida/garden.webp'
+      ],
       category: 'Hospedajes',
       subcategory: 'Cabañas',
       price: 'A consultar',

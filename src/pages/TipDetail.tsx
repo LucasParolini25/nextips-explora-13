@@ -334,8 +334,8 @@ const TipDetail = () => {
   };
   
   const shareOnInstagram = () => {
-    // Como Instagram no permite compartir directamente, abrimos la app
-    window.open('https://www.instagram.com/', '_blank');
+    // Como Instagram no permite compartir directamente, abrimos el perfil de la empresa
+    window.open('https://www.instagram.com/tipsnex/', '_blank');
   };
   
   return (
